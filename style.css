@@ -1,6 +1,6 @@
 body{
    
-    background:#999;
+    background:linear-gradient(#aaa,#27ae60);
     color:white;
 }
 
@@ -8,6 +8,25 @@ body{
     width:968px;
     margin:auto;
 }
+
+#header{
+    text-shadow: 2px 2px 5px #27ae60;
+    animation-name: color_change;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    
+}
+
+
+
+@keyframes color_change{
+    0% {color:deeppink};
+    30% {color:aquamarine;}
+    70%{color:bisque;}
+    100% {color:green};
+    
+}
+
 
 
 .clr{
@@ -22,14 +41,21 @@ body{
 
 #nav li{
     display:inline;
-    margin-right:20px
+    padding-right:30px
 }
 
 a {
     text-decoration: none;
     color:white;
     border:none;
-    font-size:18px;
+    font-size:15px;
+    padding:2px 5px;
+    transition: background 1s;
+    
+}
+
+li a:hover{
+   background:orange;
 }
 
 .active{
@@ -39,6 +65,15 @@ a {
 #about{
     float:left;
     width:70%;
+}
+
+p::first-line {
+    color : #666;
+}
+
+p::selection{
+    color:#fff;
+    background: #000;
 }
 
 #sidebar{
